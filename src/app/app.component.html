@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-title>{{title}}</mat-card-title>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <div class="button-row">
+      <button mat-raised-button color="basic" routerLink="/users">List Users</button>
+      <button mat-raised-button color="primary" routerLink="/adduser">Add User</button>
+      <button mat-raised-button color="primary" routerLink="/getuser">Get User</button>
+    </div>
+    <mat-divider></mat-divider>
+    <router-outlet></router-outlet>
+  </mat-card-content>
+</mat-card>

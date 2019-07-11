@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+  <mat-form-field class="full-width">
+    <input matInput [(ngModel)]="user.name" id="name" name="name" required #name="ngModel" placeholder="Enter user's name" value="">
+  </mat-form-field>
+  <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
+
+  <mat-form-field class="full-width">
+    <input matInput [(ngModel)]="user.email" id="email" name="email" required #email="ngModel" placeholder="Enter user's email" value="">
+  </mat-form-field>
+  <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div>
+
+  <div class="button-row"></div>
+  <button mat-raised-button type="submit" [disabled]="!userForm.form.valid">Submit</button>
+</form>
