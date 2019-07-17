@@ -20,7 +20,7 @@ import { UserGetComponent } from './user-get/user-get.component';
     UserGetComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
